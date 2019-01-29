@@ -12,7 +12,7 @@ $(function() {
     var id = $(this).data("id");
     $.get("/products/" + id + ".json", function(obj) {
         var inventoryText = "<strong>Available</strong>";
-        if(inventory = 0){
+        if(obj["inventory"] = 0){
           inventoryText = "<strong>Sold Out</strong>";
         }
         var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
